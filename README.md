@@ -8,7 +8,7 @@ In this notebook, I am going to use machine learning to detect spots in high reo
 
 - I use feature creation to generate new features from the trajectory (position versus time(frame)) data. The features I created for my ML algorithm depend on the positional difference between the current position or preciding or next positions in the movie, and they are as follows:
 
-pos: the position of the protein (y coordinate).
+pos: the position of the protein (y coordinate).<br>
 slope: difference between the current position and the previous position.
 second_slope: difference between the current position and position two frames ago.
 third_slope: difference between the current position and position three frames ago.
