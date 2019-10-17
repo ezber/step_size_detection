@@ -1,10 +1,10 @@
 # step size detection using machine learning
 
-In this notebook, I am going to use machine learning to detect spots in high reolution flourescent microscopy. The tiff image files used belong to motor protein dynein.
+In this notebook, I am going to use machine learning to detect spots in images obtained via high resolution flourescent microscopy. The tiff image files used here belong to motor protein dynein.
 
-- Detection of the flouresenctly labeled motor proteins under the microscope is tricky and it requires precise spot tracking. The image is usually very noisy due to the inaccuracies arising from quantifying the number of detected photons in each pixels and follows a gaussian distribution around a flourescently labeled proteins (GFP in this notebook). Here I train a regressian algorithm to detect spot centers and obtain the overall trajectory of the protein.
+- Detection of the flourescently labeled motor proteins under the microscope is tricky and it requires precise spot tracking. The image is usually very noisy due to the inaccuracies arising from quantifying the number of detected photons in each pixel and follows a gaussian distribution around the flourescently labeled proteins (GFP in this notebook). Here I train a regression algorithm to detect spot centers and obtain the overall trajectory of the protein.
 
-- Analysis of the step size (motor proteins have two "legs" and take steps with a varying step size distribution especially for dynein), is an important characteristics in understanding how a motor protein works. Dwell time; time passing between two consecutive steps is nother important feature of these proteins. I hand-fit a trace by investigating where the steps occur initially and use a Logistic Regression algorithm to detect the steps automatically.
+- Analysis of the step size (motor proteins have two "legs" and take steps with a varying step size distribution especially for dynein), is an important characteristics in understanding how a motor protein works. Dwell time; time passing between two consecutive steps is another important feature of these proteins. I hand-fit a trace by investigating where the steps occur initially and use a Logistic Regression algorithm to detect the steps automatically.
 
 - I use feature creation to generate new features from the trajectory (position versus time(frame)) data. The features I created for my ML algorithm depend on the positional difference between the current position or preciding or next positions in the movie, and they are as follows:
 
