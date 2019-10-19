@@ -19,3 +19,9 @@ tanhx2: tanh of the difference between the two previous position and the second 
 sinx: sinx of the difference between the previous position and the next position.<br>
 <br>
 Other types of features are also necessary for the detection of the backward steps, this notebook only covers the detection in the forward direction. Dynein's stepping pattern is highly irregular compared to for instance kinesin, but majority of the steps are still in the forward direction; as it needs to move towards the minus-end of the Microtubules (molecular tracks) to perform its celular functions.
+<br><br>
+This repository consists of following files that make up the whole project:<br>
+single_spot_detection.ipynb : uses wavelet forms to clean the noise and detect single spots.<br>
+linear_regression_for_spot_detection.ipynb : feeds the spot locations (target) and pixel intensities (features) to train a Linear Regression Model for spot detection.<br>
+trajectory_extraction_and_step_detection.ipynb : extracts the overall trajectory using the 2nd notebook and demostrates how step detection is performed to generate data for the next notebook.<br>
+feature_creation_and_logistic_regression.ipynb : creates new features from the overall trajectory for step detection and uses logistic regression on a new trace to extract features belonging to motor protein.
